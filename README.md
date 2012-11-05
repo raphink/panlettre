@@ -12,6 +12,7 @@ Simply follow these instructions:
 - Each document should be named with the pattern `recipient_whatever.extension`, where `recipient` is the name of a file in the `addresses/` directory, containing the recipient's address, typeset in LaTeX;
 - The (optional) document title will be used as the letter's subject;
 - The (optional) document author will be used as the signature. You should provide this value if you haven't set it with `\name{}` in `default.ins`;
+- The (optional) document date can also be specified;
 - The first "section" heading in the document will be used as the opening;
 - The second (and last) "section" heading in the document will be used as the closing;
 - Any other top-level section heading will be ignored.

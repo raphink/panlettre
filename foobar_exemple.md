@@ -1,5 +1,6 @@
 % Un exemple
 % Le Directeur, Robert Oot
+% 25 décembre 2012
 
 # Cher M. Foo,
 
