@@ -1,0 +1,28 @@
+#!/bin/bash
+
+INFILE="$1"
+OUTFILE="$2"
+CLASS=lettre
+
+if [ -z $OUTFILE ]; then
+  echo "Usage: $0 <recipient_file.<md|rst>> <outfile.<tex|pdf>>"
+  exit 1
+fi
+
+RECIPIENT=${INFILE%%_*}
+
+if [ -e "addresses/$RECIPIENT" ]; then
+  RECIPIENT_ADDRESS=$(cat "addresses/$RECIPIENT")
+else
+  echo "E: No such file addresses/$RECIPIENT"
+  exit 1
+fi
+
+pandoc \
+  --template lettre.latex \
+  --latex-engine=lualatex \
+  -V "documentclass=lettre" \
+  -V "recipient=${RECIPIENT_ADDRESS}" \
+  -o "$OUTFILE" "$INFILE"
+
+
