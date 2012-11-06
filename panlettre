@@ -9,20 +9,9 @@ if [ -z $OUTFILE ]; then
   exit 1
 fi
 
-RECIPIENT=${INFILE%%_*}
-
-if [ -e "addresses/$RECIPIENT" ]; then
-  RECIPIENT_ADDRESS=$(cat "addresses/$RECIPIENT")
-else
-  echo "E: No such file addresses/$RECIPIENT"
-  exit 1
-fi
-
 pandoc \
   --template lettre.latex \
   --latex-engine=lualatex \
   -V "documentclass=lettre" \
-  -V "recipient=${RECIPIENT_ADDRESS}" \
   -o "$OUTFILE" "$INFILE"
-
 

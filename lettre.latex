@@ -99,9 +99,6 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-$if(author)$
-\name{$author$}
-$endif$
 $if(date)$
 \date{$date$}
 $endif$
@@ -113,6 +110,8 @@ $endif$
 \ifcase\thesection%
 \relax%
 \or%
+\name{#1}%
+\or%
 \opening{#1}%
 \or%
 \closing{#1}%
@@ -121,7 +120,7 @@ $endif$
 
 \begin{document}
 
-\begin{letter}{$recipient$}
+\begin{letter}{$author$}
 $if(title)$
 \def\concname{Objet :~}
 \conc{$title$}
