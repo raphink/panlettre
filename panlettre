@@ -12,7 +12,6 @@ fi
 pandoc \
   --template lettre.latex \
   --latex-engine=lualatex \
-  -V "documentclass=lettre" \
   -V "lang=french" \
   -o "$OUTFILE" "$INFILE"
 
