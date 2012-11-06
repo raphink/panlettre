@@ -14,7 +14,7 @@ En utilisant `panlettre`, vous pouvez écrire vos lettres en:
 
 - [Markdown](http://daringfireball.net/projects/markdown/);
 - [reStructuredText](http://docutils.sourceforge.net/rst.html);
-- probably other pandoc-supported formats.
+- probablement d'autres formats supportés par `pandoc`.
 
 N'hésitez pas à effectuer un *Pull Request* sur [GitHub](http://www.github.com) si vous souhaitez fournir de nouvelles fonctionalités.
 
