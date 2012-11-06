@@ -1,4 +1,4 @@
-%
+% Lettres en Markdown
 % Foo Bar & Compagnie  
 314, rue Pi  
 2456 Cosinus
