@@ -10,6 +10,12 @@
 
 Je vous envoie cette missive pour vous annoncer la possibilité de rédiger vos lettres en markdown si cela vous chante.
 
+En utilisant `panlettre`, vous pouvez écrire vos lettres en:
+
+- [Markdown](http://daringfireball.net/projects/markdown/);
+- [reStructuredText](http://docutils.sourceforge.net/rst.html);
+- probably other pandoc-supported formats.
+
 N'hésitez pas à effectuer un *Pull Request* sur [GitHub](http://www.github.com) si vous souhaitez fournir de nouvelles fonctionalités.
 
 # Bien cordialement,
