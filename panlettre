@@ -2,7 +2,6 @@
 
 INFILE="$1"
 OUTFILE="${2:-${INFILE%.*}.pdf}"
-CLASS=lettre
 
 if [ -z $OUTFILE ]; then
   echo "Usage: $0 <recipient_file.<md|rst>> <outfile.<tex|pdf>>"
