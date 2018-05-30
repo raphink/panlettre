@@ -10,7 +10,7 @@ if [ -z $OUTFILE ]; then
 fi
 
 pandoc \
-  --template lettre.latex \
+  --template $(dirname $0)/lettre.latex \
   --latex-engine=lualatex \
   -V "lang=french" \
   -o "$OUTFILE" "$INFILE"

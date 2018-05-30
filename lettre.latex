@@ -7,7 +7,15 @@
 \else
   \ifluatex
     \usepackage{fontspec}
-    \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+    \defaultfontfeatures{Ligatures=TeX}
+    \setmainfont{Linux Libertine O}
+    \usepackage[hyphenation,
+                nosingleletter,
+                lastparline,
+                homeoarchy,
+                rivers,
+                %draft
+                ]{impnattypo}
   \else
     \usepackage[utf8]{inputenc}
   \fi
@@ -16,6 +24,8 @@ $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{plainnat}
 $endif$
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 $if(biblatex)$
 \usepackage{biblatex}
 $if(biblio-files)$
@@ -95,6 +105,7 @@ $endif$
 $if(lang)$
 \usepackage[$lang$]{babel}
 $endif$
+\usepackage[protrusion=true,final]{microtype}
 $for(header-includes)$
 $header-includes$
 $endfor$
@@ -110,8 +121,6 @@ $endif$
 \ifcase\thesection%
 \relax%
 \or%
-\name{#1}%
-\or%
 \opening{#1}%
 \or%
 \closing{#1}%
@@ -120,14 +129,22 @@ $endif$
 
 \begin{document}
 
-\begin{letter}{$author$}
+\begin{letter}{$recipient$}
 $if(title)$
 \def\concname{Objet :~}
 \conc{$title$}
 $endif$
 
-$body$
+\name{$name$}
+\address{$address$}
+\telephone{$telephone$}
+\fax{$fax$}
+\email{$email$}
+\lieu{$lieu$}
+\francais
+\signature{\includegraphics[width=4cm]{$signature$}\\$name$}
 
+$body$
 
 \end{letter}
 \end{document}
