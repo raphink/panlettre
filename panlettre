@@ -10,7 +10,7 @@ fi
 
 pandoc \
   --template $(dirname $0)/lettre.latex \
-  --latex-engine=lualatex \
-  -V "lang=french" \
+  --pdf-engine=lualatex \
+  -V "lang=fr-FR" \
   -o "$OUTFILE" "$INFILE"
 
