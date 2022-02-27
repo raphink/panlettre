@@ -11,6 +11,6 @@ fi
 pandoc \
   --template $(dirname $0)/lettre.latex \
   --pdf-engine=lualatex \
-  -V "lang=fr-FR" \
+  -V "lang=french" \
   -o "$OUTFILE" "$INFILE"
 
